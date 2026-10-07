@@ -1,0 +1,6 @@
+// Agrega este match dentro de: match /databases/{database}/documents {
+match /animaliaPwaPromptIps/{ipHash} {
+  allow read, create, update: if request.auth != null;
+  allow delete: if false;
+}
+// Conserva sin cambios tus reglas actuales de animaliaClients.
